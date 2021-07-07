@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+.loader {
+  width: 10rem;
+  height: 10rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
   display: flex;
+  /* grid-template-columns: 1fr 136rem 1fr; */
   flex-direction: column;
+  font-family: 'Poppins';
   align-items: center;
+}
+.foodList {
+  margin-top: 2%;
+
+  height: auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 32rem);
+  column-gap: 5rem;
+  row-gap: 5rem;
+  padding: 2rem 0;
+}
+
+.food_card {
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.12) -2px 9px 20px 2px;
+
+  width: 32rem;
+  height: 50rem;
+  border-radius: 0 25px 0 25px;
+  background-color: #fff;
+}
+.food_img {
+  width: 32rem;
+  height: 24rem;
+  border-radius: 0 25px 0 25px;
+}
+.food_caption_small {
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
+  font-weight: normal;
+}
+.food_caption_cont {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 0 1rem;
+  font-size: 2.4rem;
+  margin-top: 1.5rem;
+}
+.food_caption {
+  display: inline-block;
+}
+
+.food_desc {
+  margin-top: 1.8rem;
+
+  font-size: 1.5rem;
+  padding: 0 1rem;
+
+  height: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.food_option_area {
+  height: 7.5rem;
+  /* background-color: blue; */
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.food_rating {
+  margin-left: 2rem;
+  fill: var(--orange);
+}
+
+.food_select {
+  width: 30%;
+  background-color: var(--orange);
+  height: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-top-left-radius: 25px;
+  align-items: center;
+}
+.food_select_btn {
+  width: 5rem;
+  height: 5rem;
+  fill: white;
+}
+.cta {
+  width: 16rem;
+  border-radius: 30px;
+  background-color: var(--orange);
+  height: 5rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.main_sub {
+  margin: 3rem 0;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1000px) {
+  .foodList {
+    grid-template-columns: repeat(2, 32rem);
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 640px) {
+  .foodList {
+    grid-template-columns: 32rem;
   }
 }
